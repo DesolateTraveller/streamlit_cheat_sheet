@@ -1,15 +1,33 @@
+#---------------------------------------------------------------------------------------------------------------------------------
+### Authenticator
+#---------------------------------------------------------------------------------------------------------------------------------
 import streamlit as st
+#---------------------------------------------------------------------------------------------------------------------------------
+### Import Libraries
+#---------------------------------------------------------------------------------------------------------------------------------
 from pathlib import Path
 import base64
 
-# Initial page config
+#---------------------------------------------------------------------------------------------------------------------------------
+### Title and description for your Streamlit app
+#---------------------------------------------------------------------------------------------------------------------------------
+#import custom_style()
+st.set_page_config(page_title="Streamlit | Cheat Sheet ",
+                   layout="wide",
+                   #page_icon=               
+                   initial_sidebar_state="expanded")
+#----------------------------------------
+st.title(f""":rainbow[Streamlit | Cheat Sheet | v0.1]""")
+st.markdown('Created by | <a href="mailto:avijit.mba18@gmail.com">Avijit Chakraborty</a>', 
+            unsafe_allow_html=True)
+st.info('**Disclaimer : :blue[Thank you for visiting the app] | Unauthorized uses or copying of the app is strictly prohibited | Click the :blue[sidebar] to follow the instructions to start the applications.**', icon="ℹ️")
+#----------------------------------------
+# Set the background image
+st.divider()
 
-st.set_page_config(
-     page_title='Streamlit cheat sheet',
-     layout="wide",
-     initial_sidebar_state="expanded",
-)
-
+#---------------------------------------------------------------------------------------------------------------------------------
+### Functions & Definitions
+#---------------------------------------------------------------------------------------------------------------------------------
 def main():
     cs_sidebar()
     cs_body()
@@ -27,14 +45,9 @@ def img_to_bytes(img_path):
 
 def cs_sidebar():
 
-    #st.sidebar.markdown('''[<img src='data:image/png;base64,{}' class='img-fluid' width=32 height=32>](https://streamlit.io/)'''.format(img_to_bytes("logomark_website.png")), unsafe_allow_html=True)
     st.sidebar.header('Streamlit cheat sheet')
-
-    st.sidebar.markdown('''<small>Summary of the [docs](https://docs.streamlit.io/), as of [Streamlit v1.25.0](https://www.streamlit.io/).</small>
-    ''', unsafe_allow_html=True)
-
+    st.sidebar.markdown('''<small>Summary of the [docs](https://docs.streamlit.io/), as of [Streamlit v1.25.0](https://www.streamlit.io/).</small>''', unsafe_allow_html=True)
     st.sidebar.markdown('__Install and import__')
-
     st.sidebar.code('$ pip install streamlit')
 
     st.sidebar.code('''
@@ -72,9 +85,8 @@ pip uninstall streamlit
 pip install streamlit-nightly --upgrade
     ''')
     st.sidebar.markdown('<small>Learn more about [experimental features](https://docs.streamlit.io/library/advanced-features/prerelease#beta-and-experimental-features)</small>', unsafe_allow_html=True)
-
     st.sidebar.markdown('''<hr>''', unsafe_allow_html=True)
-    #st.sidebar.markdown('''<small>[Cheat sheet v1.25.0](https://github.com/daniellewisDL/streamlit-cheat-sheet)  | Aug 2023 | [Daniel Lewis](https://daniellewisdl.github.io/)</small>''', unsafe_allow_html=True)
+    st.sidebar.markdown('''<small>[Cheat sheet v1.25.0](https://github.com/daniellewisDL/streamlit-cheat-sheet)  | Aug 2023 | [Daniel Lewis](https://daniellewisdl.github.io/)</small>''', unsafe_allow_html=True)
 
     return None
 
