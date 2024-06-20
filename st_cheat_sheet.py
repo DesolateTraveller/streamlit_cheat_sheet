@@ -96,6 +96,19 @@ pip install streamlit-nightly --upgrade
 
 def cs_body():
 
+    st.set_page_config(page_title="Streamlit | Cheat Sheet ",
+                   layout="wide",
+                   #page_icon=               
+                   initial_sidebar_state="expanded")
+#----------------------------------------
+    st.title(f""":rainbow[Streamlit | Cheat Sheet | v0.1]""")
+    st.markdown('Created by | <a href="mailto:avijit.mba18@gmail.com">Avijit Chakraborty</a>', 
+            unsafe_allow_html=True)
+    st.info('**Disclaimer : :blue[Thank you for visiting the app] | Unauthorized uses or copying of the app is strictly prohibited | Click the :blue[sidebar] to follow the instructions to start the applications.**', icon="ℹ️")
+#----------------------------------------
+    # Set the background image
+    st.divider()
+
     col1, col2, col3 = st.columns(3)
 
     #######################################
@@ -104,7 +117,7 @@ def cs_body():
     
     # Display text
 
-    col1.subheader('Display text')
+    col1.subheader('Display text',divider='blue')
     col1.code('''
 st.text('Fixed width text')
 st.markdown('_Markdown_') # see #*
@@ -123,7 +136,7 @@ st.code('for i in range(8): foo()')
 
     # Display data
 
-    col1.subheader('Display data')
+    col1.subheader('Display data',divider='blue')
     col1.code('''
 st.dataframe(my_dataframe)
 st.table(data.iloc[0:10])
@@ -134,7 +147,7 @@ st.metric(label="Temp", value="273 K", delta="1.2 K")
 
     # Display media
 
-    col1.subheader('Display media')
+    col1.subheader('Display media',divider='blue')
     col1.code('''
 st.image('./header.png')
 st.audio(data)
@@ -143,7 +156,7 @@ st.video(data)
 
     # Columns
 
-    col1.subheader('Columns')
+    col1.subheader('Columns',divider='blue')
     col1.code('''
 col1, col2 = st.columns(2)
 col1.write('Column 1')
@@ -161,7 +174,7 @@ col1, col2, col3 = st.columns([3,1,1])
 
     # Tabs
     
-    col1.subheader('Tabs')
+    col1.subheader('Tabs',divider='blue')
     col1.code('''
 # Insert containers separated into tabs:
 >>> tab1, tab2 = st.tabs(["Tab 1", "Tab2"])
@@ -175,7 +188,7 @@ col1, col2, col3 = st.columns([3,1,1])
 
     # Control flow
 
-    col1.subheader('Control flow')
+    col1.subheader('Control flow',divider='blue')
     col1.code('''
 # Stop execution immediately:
 st.stop()
@@ -191,7 +204,7 @@ st.experimental_rerun()
     
     # Personalize apps for users
 
-    col1.subheader('Personalize apps for users')
+    col1.subheader('Personalize apps for users',divider='blue')
     col1.code('''
 # Show different content based on the user's email address.
 >>> if st.user.email == 'jane@email.com':
@@ -209,7 +222,7 @@ st.experimental_rerun()
 
     # Display interactive widgets
 
-    col2.subheader('Display interactive widgets')
+    col2.subheader('Display interactive widgets',divider='blue')
     col2.code('''
 st.button('Hit me')
 st.data_editor('Edit data', data)
@@ -244,7 +257,7 @@ st.color_picker('Pick a color')
 
     # Build chat-based apps
 
-    col2.subheader('Build chat-based apps')
+    col2.subheader('Build chat-based apps',divider='blue')
     col2.code('''
 # Insert a chat message container.
 >>> with st.chat_message("user"):
@@ -259,7 +272,7 @@ st.color_picker('Pick a color')
 
     # Mutate data
 
-    col2.subheader('Mutate data')
+    col2.subheader('Mutate data',divider='blue')
     col2.code('''
 # Add rows to a dataframe after
 # showing it.
@@ -274,7 +287,7 @@ st.color_picker('Pick a color')
 
     # Display code
 
-    col2.subheader('Display code')
+    col2.subheader('Display code',divider='blue')
     col2.code('''
 st.echo()
 >>> with st.echo():
@@ -283,7 +296,7 @@ st.echo()
 
     # Placeholders, help, and options
 
-    col2.subheader('Placeholders, help, and options')
+    col2.subheader('Placeholders, help, and options',divider='blue')
     col2.code('''
 # Replace any single element.
 >>> element = st.empty()
@@ -312,7 +325,7 @@ st.experimental_set_query_params(**params)
 
     # Connect to data sources
     
-    col3.subheader('Connect to data sources')
+    col3.subheader('Connect to data sources',divider='blue')
 
     col3.code('''
 st.experimental_connection('pets_db', type='sql')
@@ -329,7 +342,7 @@ conn = st.experimental_connection('snowpark')
 
     # Optimize performance
 
-    col3.subheader('Optimize performance')
+    col3.subheader('Optimize performance',divider='blue')
     col3.write('Cache data objects')
     col3.code('''
 # E.g. Dataframe computation, storing downloaded data, etc.
@@ -349,7 +362,7 @@ conn = st.experimental_connection('snowpark')
 # Clear values from *all* in-memory or on-disk cached functions
 >>> st.cache_data.clear()
     ''')
-    col3.write('Cache global resources')
+    col3.write('Cache global resources',divider='blue')
     col3.code('''
 # E.g. TensorFlow session, database connection, etc.
 >>> @st.cache_resource
@@ -368,7 +381,7 @@ conn = st.experimental_connection('snowpark')
 # Clear all global resources from cache
 >>> st.cache_resource.clear()
     ''')
-    col3.write('Deprecated caching')
+    col3.write('Deprecated caching',divider='blue')
     col3.code('''
 >>> @st.cache
 ... def foo(bar):
@@ -386,7 +399,7 @@ conn = st.experimental_connection('snowpark')
 
     # Display progress and status
 
-    col3.subheader('Display progress and status')
+    col3.subheader('Display progress and status',divider='blue')
     col3.code('''
 # Show a spinner during a process
 >>> with st.spinner(text='In progress'):
