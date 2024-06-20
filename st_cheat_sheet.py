@@ -20,7 +20,6 @@ st.set_page_config(page_title="Streamlit | Cheat Sheet ",
 st.title(f""":rainbow[Streamlit | Cheat Sheet | v0.1]""")
 st.markdown('Created by | <a href="mailto:avijit.mba18@gmail.com">Avijit Chakraborty</a>', 
             unsafe_allow_html=True)
-st.info('**Disclaimer : :blue[Thank you for visiting the app] | Unauthorized uses or copying of the app is strictly prohibited | Click the :blue[sidebar] to follow the instructions to start the applications.**', icon="ℹ️")
 #----------------------------------------
 # Set the background image
 st.divider()
@@ -95,9 +94,6 @@ pip install streamlit-nightly --upgrade
 ##########################
 
 def cs_body():
-
-    st.title(f""":rainbow[Streamlit | Cheat Sheet | v0.1]""")
-    st.markdown('Created by | <a href="mailto:avijit.mba18@gmail.com">Avijit Chakraborty</a>', unsafe_allow_html=True)
 
     col1, col2, col3 = st.columns(3)
 
