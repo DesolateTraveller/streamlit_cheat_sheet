@@ -12,12 +12,12 @@ import base64
 ### Title and description for your Streamlit app
 #---------------------------------------------------------------------------------------------------------------------------------
 #import custom_style()
-st.set_page_config(page_title="Streamlit | Cheat Sheet ",
+st.set_page_config(page_title="Streamlit | Cheat Sheet | v0.1",
                    layout="wide",
                    #page_icon=               
                    initial_sidebar_state="expanded")
 #----------------------------------------
-st.title(f""":rainbow[Streamlit | Cheat Sheet | v0.1]""")
+st.title(f""":rainbow[Streamlit | Cheat Sheet]""")
 st.markdown(
     '''
     Created by | <a href="mailto:avijit.mba18@gmail.com">Avijit Chakraborty</a> ( :envelope: [Email](mailto:avijit.mba18@gmail.com) | :bust_in_silhouette: [LinkedIn](https://www.linkedin.com/in/avijit2403/) | :computer: [GitHub](https://github.com/DesolateTraveller) ) |
