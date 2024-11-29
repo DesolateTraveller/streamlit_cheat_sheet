@@ -29,7 +29,7 @@ st.title(f""":rainbow[Streamlit | Cheat Sheet | v0.1]""")
 #st.divider()
 st.info('**A lightweight Streamlit app that help to consolidate all of the commands at a single page.**', icon="ℹ️")
 #----------------------------------------
-st.sidebar.markdown(
+st.markdown(
     """
     <style>
     .footer {
