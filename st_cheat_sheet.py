@@ -12,22 +12,52 @@ import base64
 ### Title and description for your Streamlit app
 #---------------------------------------------------------------------------------------------------------------------------------
 #import custom_style()
-st.set_page_config(page_title="Streamlit | Cheat Sheet | v0.1",
+st.set_page_config(page_title="Streamlit | Cheat Sheet ",
                    layout="wide",
                    #page_icon=               
                    initial_sidebar_state="expanded")
 #----------------------------------------
-st.title(f""":rainbow[Streamlit | Cheat Sheet]""")
-st.markdown(
-    '''
-    Created by | <a href="mailto:avijit.mba18@gmail.com">Avijit Chakraborty</a> ( :envelope: [Email](mailto:avijit.mba18@gmail.com) | :bust_in_silhouette: [LinkedIn](https://www.linkedin.com/in/avijit2403/) | :computer: [GitHub](https://github.com/DesolateTraveller) ) |
-    for best view of the app, please **zoom-out** the browser to **75%**.
-    ''',
-    unsafe_allow_html=True)
+st.title(f""":rainbow[Streamlit | Cheat Sheet | v0.1]""")
+#st.markdown(
+    #'''
+    #Created by | <a href="mailto:avijit.mba18@gmail.com">Avijit Chakraborty</a> ( :envelope: [Email](mailto:avijit.mba18@gmail.com) | :bust_in_silhouette: [LinkedIn](https://www.linkedin.com/in/avijit2403/) | :computer: [GitHub](https://github.com/DesolateTraveller) ) |
+    #for best view of the app, please **zoom-out** the browser to **75%**.
+    #''',
+    #unsafe_allow_html=True)
 #----------------------------------------
 # Set the background image
-st.divider()
+#st.divider()
+st.info('**A lightweight Streamlit app that help to consolidate all of the commands at a single page.**', icon="ℹ️")
+#----------------------------------------
+st.sidebar.markdown(
+    """
+    <style>
+    .footer {
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        background-color: #f1f1f1;
+        text-align: center;
+        padding: 10px;
+        font-size: 14px;
+        color: #333;
+        z-index: 100;
+    }
+    .footer p {
+        margin: 0;
+    }
+    .footer .highlight {
+        font-weight: bold;
+        color: blue;
+    }
+    </style>
 
+    <div class="footer">
+        <p>© 2024 | Created by : <span class="highlight">Avijit Chakraborty</span> | Prepared by: <a href="mailto:avijit.mba18@gmail.com">Avijit Chakraborty</a></p> <span class="highlight">Thank you for visiting the app | This app is created for internal use, unauthorized uses or copying is strictly prohibited | For best view of the app, please zoom out the browser to 75%.</span>
+    </div>
+    """,
+    unsafe_allow_html=True)
 #---------------------------------------------------------------------------------------------------------------------------------
 ### Functions & Definitions
 #---------------------------------------------------------------------------------------------------------------------------------
@@ -49,7 +79,7 @@ def img_to_bytes(img_path):
 def cs_sidebar():
 
     st.sidebar.header('Streamlit cheat sheet')
-    st.sidebar.markdown('''<small>Summary of the [docs](https://docs.streamlit.io/), as of [Streamlit v1.25.0](https://www.streamlit.io/).</small>''', unsafe_allow_html=True)
+    st.sidebar.markdown('''<small>Summary of the [docs](https://docs.streamlit.io/), as of [Streamlit](https://www.streamlit.io/).</small>''', unsafe_allow_html=True)
     st.sidebar.markdown('__Install and import__')
     st.sidebar.code('$ pip install streamlit')
 
